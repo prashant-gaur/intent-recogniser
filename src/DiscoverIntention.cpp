@@ -67,7 +67,7 @@ bool DiscoverIntention::check_for_calendar_intention(const std::string& arg_inpu
 
 bool DiscoverIntention::check_for_fact_intention(const std::string& arg_input_string)
 {
-    std::regex fact("(.*)(fact[^ ]?)(.*)");
+    std::regex fact("(.*)([f,F]act[^ ]?)(.*)");
 
     if (std::regex_match(arg_input_string, fact)) {
         //std::cout << "fact intention matched \n";
