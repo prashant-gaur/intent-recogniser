@@ -36,7 +36,7 @@ DiscoverIntention::find_intention(const std::string& arg_user_input)
         return enum_to_string(m_intention);
     }
 
-    return "Actual intention could not be identified. Try again !!! \n";
+    return "Actual intention could not be identified. Try again !!!";
 }
 
 bool DiscoverIntention::check_for_weather_intention(const std::string& arg_input_string)
