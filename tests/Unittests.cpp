@@ -13,7 +13,9 @@ INSTANTIATE_TEST_CASE_P(
     DiscoverIntentionParametersTests,
     ::testing::Values(
         std::make_tuple("Get Weather", "How is the weather in my city ?"),
-        std::make_tuple("Check Calendar", "Do I have appointment at 06:00pm today ?")));
+        std::make_tuple("Check Calendar", "Do I have appointment at 06:00pm today ?"),
+        std::make_tuple("Actual intention could not be identified. Try again !!!", "Do I have appointment at 12pm tomo ?"),
+        std::make_tuple("Actual intention could not be identified. Try again !!!", "")));
 
 TEST_P(DiscoverIntentionParametersTests, MatchIntention)
 {
