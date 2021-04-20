@@ -27,7 +27,7 @@ DiscoverIntention::find_intention(const std::string& arg_user_input)
     m_intention = Intention::NOT_SET; // reset intention
 
     for (auto checkintention : m_intentions_checklist) {
-        found_intention = (this->*checkintention)(arg_user_input);
+        found_intention = checkintention(*this, arg_user_input);
         if (found_intention)
             break;
     }

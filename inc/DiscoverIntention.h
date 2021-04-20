@@ -1,4 +1,4 @@
-#define pragma once
+#pragma once
 
 #include "IDiscoverIntention.h"
 #include <functional>
@@ -30,6 +30,6 @@ private:
     bool check_for_fact_intention(const std::string& arg_input_string);
     const std::string enum_to_string(const Intention& value);
 
-    std::vector<bool (DiscoverIntention::*)(const std::string& arg_input_string)> m_intentions_checklist;
+    std::vector<std::function<bool(DiscoverIntention&, const std::string& arg_input_string)> > m_intentions_checklist;
     Intention m_intention;
 };
