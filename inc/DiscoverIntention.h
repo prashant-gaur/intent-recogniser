@@ -21,6 +21,9 @@ public:
     // non-copyable
     DiscoverIntention(const DiscoverIntention& obj) = delete;
     DiscoverIntention& operator=(const DiscoverIntention& obj) = delete;
+    // non-movable
+    DiscoverIntention(const DiscoverIntention&& obj) = delete;
+    DiscoverIntention& operator=(const DiscoverIntention&& obj) = delete;
 
     const std::string find_intention(const std::string& arg_user_input) override;
 
